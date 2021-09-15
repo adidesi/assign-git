@@ -2,17 +2,22 @@
 ->
 .gitignore is file that contains the list of files that the git application should not track or upload in the repository.
 It is maintained at the root of the git repository.
+For a java application project, .gitignore file contains list of items such as 
+.mtj.tmp/, *.class, *.jar, *.war, *.ear, *.nar, *.zip, *.tar.gz, *.rar, hs_err_pid*, *.log
+
 2.What does fast-forward in Git mean?
 ->
 When there is merge between branches, a merge commit takes place and chain of commites goes ahead.
 However, If there is a direct chain from a source branch to target branch, ie the codechain has just gone ahead of source branch in target or source is lagging behind,
 the git takes a short cut of moving the source branch pointer to target branch pointer without actually making an additional merge commit.
 This short cut / fast-forward is taken since the path is direct. 
+
 3.Why should you have different branches?
 ->
 One should maintain different branches for better change control in a project. 
 It also helps maintain the principle of seperation of concernsIf there are multiple collaborators in a project and they're working on similar/seperate files, branches are good way to contain their changes. This also helps to limit unwarranted mixing code and keeps the repository clean.
-These changes can be brought together collectively, when the branches are merged to what is called a main/master branch for integration testing or delivery.
+These changes can be brought together collectively, when the branches are merged to what is called a main/master or primary branch for integration testing or delivery.
+
 4.In a project how many remote Git repositories do you usually have?
 ->
 One can have many repositories under one project. However while initialization default repositories - origin is to be created.
